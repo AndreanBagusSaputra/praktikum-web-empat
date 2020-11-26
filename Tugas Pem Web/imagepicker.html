@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+ <style type="text/css">
+ body
+   {
+       flex: 20px; 
+   }
+ #judul
+   {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+   }  
+ </style>
+<body>
+    <h1 id="judul">Makanan Khas Indonesia</h1>
+    <br>
+    <select onchange="gantigambar()" id="listgambar">
+        <option value="https://www.gramedia.com/blog/content/images/size/w600/2019/07/kuliner-indonesia.jpg">Pilih Makanan</option>
+        <option value="https://mamikos.com/info/wp-content/uploads/2020/06/Rendang-Daging-1024x729.jpg">Sumatra Barat</option>
+        <option value="https://cdn-2.tstatic.net/tribunnewswiki/foto/bank/images/kerakkk-telor.jpg">Jakarta</option>
+        <option value="https://indonesia.go.id/assets/img/content_image/1558421946_gudeg_olahan_gori_khas_yogyakarta_153522.jpg">Yogyakarta</option>
+        <option value="https://cdn2.tstatic.net/manado/foto/bank/images/pempek-palembang-2563.jpg">Palembang</option>
+        <option value="https://miro.medium.com/max/1200/1*S8ZtyPrFVoKME6FlSTRkGg.jpeg">Bali</option>
+    </select>
+    <br>
+    <img src="https://www.gramedia.com/blog/content/images/size/w600/2019/07/kuliner-indonesia.jpg" style="width: 50%;" id="gambar">
+
+    <script type="text/javascript">
+      function gantigambar()
+      {
+          let gambar = document.getElementById("listgambar").value;
+          document.getElementById("gambar").src = gambar;
+          alert("Ini Adalah Makananan Khas" + gambar);
+      }
+    </script>
+</body>
+</html>

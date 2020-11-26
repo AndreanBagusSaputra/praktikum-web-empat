@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Validasi</h1>
+    <form action="">
+        <label for="">Nama</label>
+        <input type="text" id="nama">
+        <br>
+        <label for="">Email</label>
+        <input type="text" id="email">
+        <br>
+        <label for="">Waktu Pemberangkatan</label>
+        <input type="text" id="waktu" min="00.00" max="23.59">
+        <br>
+        <label for="">Destinasi</label>
+        <input type="text" id="destinasi">
+        <br>
+        <label for="">Tiket</label>
+        <input type="number" id="tiket">
+        <button type="button" onclick="validasi()"></button>
+    </form>
+    <h1 id="namapelanggan"></h1>
+    <h1 id="emailpelanggan"></h1>
+    <h1 id="waktupemberangkatan"></h1>
+    <h1 id="destinasipelanggan"></h1>
+    <h1 id="tiketpelanggan"></h1>
+
+    <script>
+        function validasi(){
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let waktu = document.getElementById('waktu').value;
+            let destinasi = document.getElementById('destinasi').value;
+            let tiket = document.getElementById('tiket').value;
+            if(nama == "" || nama.leght>30)
+        {
+               alert("nama tidak boleh kosong");
+           }else if (email == ""){
+               alert("email tidak boleh kososng");
+           }else if (waktu == ""){
+               alett("waktu tidak boleh kosong");
+           }else if (destinasi == ""){
+               alert("destinasi tidak boleh kosong");
+           }else if (tiket == ""){
+               alert("tiket tidak boleh kosong");
+           } 
+           else{
+               document.getElementById('namapelanggan').innerHTML = 'Nama Pelanggan :'+ nama + '<br>'
+               document.getElementById('emailpelanggan').innerHTML = 'Email Pelanggan :'+ email + '<br>'
+               document.getElementById('waktupemberangkatan').innerHTML = 'Waktu Pemberangkatan :'+ waktu + '<br>'
+               document.getElementById('destinasipelanggan').innerHTML = 'Destinasi Pelanggan :'+ destinasi +'<br>'
+               document.getElementById('tiketpelanggan').innerHTML = 'Tiket Pelanggan :'+ tiket + '<br>'
+           }   
+        }
+
+    </script>
+</body>
+</html>
